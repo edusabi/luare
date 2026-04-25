@@ -49,18 +49,20 @@ body {
   width: 100%;
   max-width: 390px;
   text-align: center;
-  padding: 24px 18px;
+
+  padding: 150px 18px 24px;
 }
 
+/* IMAGEM NO TOPO CENTRALIZADA */
 .logo {
+  position: fixed;   
+  top: 0;         
+  left: 50%;
+  transform: translateX(-50%);
   width: clamp(130px, 34vw, 190px);
-  margin: 0 auto 18px;
-}
-
-.logo img {
-  width: 100%;
+  height: auto;
   display: block;
-  object-fit: contain;
+  z-index: 999;
 }
 
 .title {
@@ -121,6 +123,11 @@ body {
 
   .content {
     max-width: 360px;
+    padding-top: 140px;
+  }
+
+  .logo {
+    top: 0;
   }
 }
 
@@ -132,11 +139,12 @@ body {
   }
 
   .content {
-    padding: 18px 10px;
+    padding: 130px 10px 18px;
   }
 
   .logo {
-    margin-bottom: 14px;
+    top: 60px;
+    width: clamp(110px, 42vw, 100px);
   }
 
   .subtitle {
@@ -161,5 +169,9 @@ body {
 
   .button {
     font-size: 0.9rem;
+  }
+
+  .logo {
+    top: 18px;
   }
 }

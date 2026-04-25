@@ -11,9 +11,7 @@ export default function App() {
       <div className={styles.overlay}></div>
 
       <main className={styles.content}>
-        <div className={styles.logo}>
-          <img src="./logo.jpeg" alt="Logo" />
-        </div>
+          <img className={styles.logo} src="./logo.jpeg" alt="Logo" />
 
         <h1 className={styles.title}>Revenda Premium</h1>
         <p className={styles.subtitle}>Atendimento rápido e exclusivo</p>
