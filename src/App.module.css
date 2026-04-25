@@ -20,11 +20,7 @@ body {
 .container {
   min-height: 100vh;
   width: 100%;
-  background-image: url('./background.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 8% center;
-
+  /* A imagem de fundo saiu daqui e foi para a .overlay */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,10 +32,16 @@ body {
 .overlay {
   position: absolute;
   inset: 0;
-  /* ADICIONADO: Clareia a foto de fundo e melhora o contraste sem usar branco */
-  backdrop-filter: brightness(1.25) ;
-  -webkit-backdrop-filter: brightness(1.25); /* Suporte para Safari */
-  z-index: 1; /* Garante que fique acima do fundo, mas atrás do texto */
+  z-index: 1;
+  
+  /* A IMAGEM DE FUNDO AGORA FICA AQUI */
+  background-image: url('./background.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 8% center;
+  
+  /* Usamos o 'filter' padrão, que funciona perfeitamente na Vercel, Safari, Android, etc. */
+  filter: brightness(1.25) contrast(1.1);
 }
 
 .content {
@@ -103,7 +105,7 @@ body {
 
   background: rgba(255, 255, 255, 0.16);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* Suporte para Safari no botão */
+  -webkit-backdrop-filter: blur(10px);
 
   transition: all 0.25s ease;
 }
@@ -119,7 +121,8 @@ body {
 
 /* Tablet */
 @media (max-width: 768px) {
-  .container {
+  /* O ajuste de posição agora é na .overlay */
+  .overlay {
     background-position: 12% center;
   }
 
@@ -137,6 +140,10 @@ body {
 @media (max-width: 480px) {
   .container {
     padding: 16px;
+  }
+  
+  /* O ajuste de posição agora é na .overlay */
+  .overlay {
     background-position: 16% center;
   }
 
