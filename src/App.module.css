@@ -36,9 +36,7 @@ body {
 .overlay {
   position: absolute;
   inset: 0;
-  /* ADICIONADO: Clareia a foto de fundo e melhora o contraste sem usar branco */
-  backdrop-filter: brightness(1.25) ;
-  -webkit-backdrop-filter: brightness(1.25); /* Suporte para Safari */
+  background: rgba(255, 255, 255, 0.06); /* clareia */
   z-index: 1; /* Garante que fique acima do fundo, mas atrás do texto */
 }
 
