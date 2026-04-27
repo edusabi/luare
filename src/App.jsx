@@ -17,7 +17,7 @@ export default function App() {
         <p className={styles.subtitle}>Atendimento rápido e exclusivo</p>
 
         <a
-          href="https://wa.me/5581996680762"
+          href="https://wa.me/5581995789922"
           target="_blank"
           rel="noreferrer"
           className={styles.button}
