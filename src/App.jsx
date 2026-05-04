@@ -24,6 +24,16 @@ export default function App() {
         >
           Atendimento Atacado
         </a>
+
+        <a
+          href="https://chat.whatsapp.com/L1OGHfuWsNp6nZkuBkm8cn?mode=gi_t"
+          target="_blank"
+          rel="noreferrer"
+          className={styles.button}
+          style={{marginTop: "1rem"}}
+        >
+          Grupo vip com vaga
+        </a>
       </main>
     </div>
   )
